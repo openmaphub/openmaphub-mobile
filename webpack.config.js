@@ -12,7 +12,6 @@ module.exports = {
     root: [path.join(__dirname, "bower_components")]
   },
   node: {
-    console: 'empty',
     fs: 'empty',
     net: 'empty',
     tls: 'empty'
