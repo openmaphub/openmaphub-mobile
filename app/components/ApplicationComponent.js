@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
-import ApplicationActions from '../actions/ApplicationActions';
 import $ from 'jquery';
 
 export default class ApplicationComponent extends Component {
@@ -10,23 +9,27 @@ export default class ApplicationComponent extends Component {
   }
 
   render() {
-    return <div>
+    return (
+    <div>
         <header>
             <nav>
               <div className="nav-wrapper">
                 <a href="#!" className="brand-logo">OpenMapHub</a>
-                <a href="#" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
-                <ul className="right hide-on-med-and-down">
-                  <li><a href="sass.html">Sass</a></li>
-                  <li><a href="badges.html">Components</a></li>
-                  <li><a href="collapsible.html">Javascript</a></li>
-                  <li><a href="mobile.html">Mobile</a></li>
-                </ul>
-                <ul className="side-nav" id="mobile-demo">
-                  <li><a href="sass.html">Sass</a></li>
-                  <li><a href="badges.html">Components</a></li>
-                  <li><a href="collapsible.html">Javascript</a></li>
-                  <li><a href="mobile.html">Mobile</a></li>
+                <a href="#" data-activates="sidenav" className="button-collapse"><i className="material-icons">menu</i></a>
+
+                <ul className="side-nav" id="sidenav">
+                  <li>
+                    <Link className='tab-item' to="/home">
+                      <span className="icon icon-home"></span>
+                      <span className="tab-label">Home</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className='tab-item' to="/home">
+                      <span className="icon icon-home"></span>
+                      <span className="tab-label">Layer</span>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -40,6 +43,7 @@ export default class ApplicationComponent extends Component {
             <span className="tab-label">Home</span>
           </Link>
         </footer>
-     </div>;
+     </div>
+   );
   }
-};
+}
