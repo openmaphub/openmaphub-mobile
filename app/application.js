@@ -6,8 +6,8 @@ import Routes from './config/Routes';
 import ApplicationStore from './stores/ApplicationStore';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import '../app/assets/scss/style.scss';
-import '../bower_components/ratchet/dist/css/ratchet.min.css';
-import '../bower_components/ratchet/dist/css/ratchet-theme-ios.min.css';
+import '../node_modules/materialize-css/dist/css/materialize.min.css';
+import 'materialize-css';
 
 let history = createBrowserHistory();
 

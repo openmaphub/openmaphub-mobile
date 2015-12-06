@@ -1,5 +1,5 @@
 var path = require('path');
-var webpack = require("webpack");
+var webpack = require('webpack');
 
 module.exports = {
   context: __dirname + '/app',
@@ -7,9 +7,6 @@ module.exports = {
   output: {
     path: __dirname + '/www',
     filename: 'bundle.js'
-  },
-  resolve: {
-    root: [path.join(__dirname, "bower_components")]
   },
   node: {
     fs: 'empty',
@@ -21,7 +18,7 @@ module.exports = {
     loaders: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         loader: 'babel',
         query: {
           optional: ['runtime'],
@@ -35,15 +32,16 @@ module.exports = {
         test: /\.(css|scss)$/,
         loader: 'style!css!sass'
       },
-      {
-        test: /\.(png|woff|ttf|eot|svg)$/,
-        loader: 'url-loader?limit=100000'
-      }
+      {test: /\.(woff|svg|ttf|eot|gif)([\?]?.*)$/, loader: 'file-loader?name=[name].[ext]'}
     ]
   },
   plugins: [
-    new webpack.ResolverPlugin(
-      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-    )
+    new webpack.ProvidePlugin({
+          $: 'jquery',
+       jQuery: 'jquery',
+       'window.jQuery': 'jquery',
+       Materialize: 'materialize-css',
+       'window.Materialize': 'materialize-css'
+    })
   ]
 };
