@@ -1,9 +1,6 @@
-# React Cordova Boilerplate
+# OpenMapHub - Mobile
 
-[React Cordova](https://github.com/rgaidot/react-cordova) is a ES6 Isomorphic
-React app using React.js, React Router, Flux, Webpack and Cordova.
-I wrote on a half day :-) Just for the fun!
-Web demo: https://react-cordova-demo.herokuapp.com 
+Based on template from [React Cordova](https://github.com/rgaidot/react-cordova)
 
 ## Running
 

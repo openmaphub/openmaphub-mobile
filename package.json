@@ -1,20 +1,20 @@
 {
-  "name": "react-cordova",
+  "name": "openmaphub-mobile",
   "version": "0.1.0",
-  "homepage": "https://github.com/rgaidot/react-cordova",
-  "description": "ES6 Isomorphic React app using React.js, React Router, Flux, Webpack and Cordova.",
+  "homepage": "https://github.com/openmaphub/openmaphub-mobile",
+  "description": "OpenMapHub Mobile",
   "authors": [
-    "Régis Gaidot <rgaidot@gmail.com>"
+    "Kristofor Carle <kris@moabi.org>"
   ],
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "keywords": [
-    "webpack",
-    "react",
-    "starter",
-    "boilerplate",
-    "cordova"
+    "mobile",
+    "openmaphub",
+    "offline",
+    "gps",
+    "collection"
   ],
-  "author": "Régis Gaidot <rgaidot@gmail.com>",
+  "author": "Kristofor Carle <kris@moabi.org>",
   "main": "app/application.js",
   "scripts": {
     "serve": "webpack-dev-server -d --config webpack.config.developement.js --content-base www/ --progress --colors --history-api-fallback",
