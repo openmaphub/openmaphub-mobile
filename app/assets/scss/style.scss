@@ -1,3 +1,25 @@
+html, body, #app, #app-container {
+  height: 100%;
+}
+
+#main {
+  height: calc(100% - 65px);
+}
+#map {
+  height: calc(100% - 39px);
+  padding: 0;
+}
+#map-component {
+    height: 100%;
+}
+
+.tab-icon {
+  line-height: 48px !important;
+}
+.side-nav-icon {
+  line-height: 64px !important;
+}
+
 .img-resize {
   width: 50px;
   height: auto;

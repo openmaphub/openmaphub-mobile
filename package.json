@@ -29,6 +29,8 @@
     "json-loader": "^0.5.2",
     "keymirror": "^0.1.1",
     "lodash": "^3.7.0",
+    "mapbox-gl": "^0.12.0",
+    "mapbox-gl-styles": "^1.1.6",
     "materialize-css": "github:openmaphub/materialize",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

@@ -6,6 +6,7 @@ import Routes from './config/Routes';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import '../app/assets/scss/style.scss';
 import '../node_modules/materialize-css/dist/css/materialize.min.css';
+import '../node_modules/mapbox-gl/dist/mapbox-gl.css';
 import 'materialize-css';
 
 let history = createBrowserHistory();
