@@ -17,7 +17,7 @@
   "author": "Kristofor Carle <kris@moabi.org>",
   "main": "app/application.js",
   "scripts": {
-    "serve": "webpack-dev-server -d --config webpack.config.developement.js --content-base www/ --progress --colors --history-api-fallback",
+    "serve": "webpack-dev-server -d --config webpack.config.development.js --content-base www/ --progress --colors --history-api-fallback",
     "build": "webpack -p --config webpack.config.production.js --profile --progress --colors",
     "lint": "eslint ./*.js ./**/*.js"
   },

@@ -3,10 +3,17 @@ var webpack = require('webpack');
 
 module.exports = {
   context: __dirname + '/app',
-  entry: ['./application.js'],
+  entry: {
+    bundle: './application.js'
+  },
+  resolve: {
+    modulesDirectories: ['node_modules'],
+    alias: {},
+    extensions: ['', '.js', '.jsx', '.json']
+  },
   output: {
     path: __dirname + '/www',
-    filename: 'bundle.js'
+    filename: "[name].js"
   },
   node: {
     fs: 'empty',
