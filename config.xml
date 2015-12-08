@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.example.react-cordova" version="0.0.1"
-  xmlns="http://www.w3.org/ns/widgets"
-  xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>react-cordova</name>
-  <description>
-        React Cordova Boilerplate.
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.openmaphub.mobile" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>OpenMapHub</name>
+    <description>
+        OpenMapHub
   </description>
-  <author email="rgaidot@gmail.com" href="http://regis.gaidot.net/">
-    Régis Gaidot
+    <author email="kris@moabi.org" href="http://moabi.org">
+    Kristofor Carle
   </author>
-  <content src="index.html"/>
-  <access origin="*"/>
+    <content src="index.html" />
+    <access origin="*" />
+    <access origin="https://api.mapbox.com" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-crosswalk-webview" spec="1" />
+    <preference name="xwalkVersion" value="15+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
 </widget>
