@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router';
 import $ from 'jquery';
 import Map from './MapComponent';
-
+import MapActions from '../actions/MapActions';
 
 export default class HomeComponent extends Component {
   constructor () {
@@ -26,6 +26,13 @@ export default class HomeComponent extends Component {
     this.setState({});
   }
 
+  onAddClick(){
+    //zoom map to GPS location
+    this.refs.map.geolocation();
+    //enable add mode
+    MapActions.addFeature();
+  }
+
   render() {
     return (
       <div className="row" style={{height: '100%', marginBottom: 0}}>
@@ -41,13 +48,13 @@ export default class HomeComponent extends Component {
             </ul>
           </div>
           <div id="map" className="col s12">
-            <Map />
+            <Map ref="map"/>
           </div>
           <div id="data" className="col s12">
             <p>data</p>
           </div>
           <div className="fixed-action-btn" style={{bottom: '45px', right: '24px'}}>
-            <a className="btn-floating btn-large red">
+            <a onClick={this.onAddClick.bind(this)} className="btn-floating btn-large red">
               <i className="large material-icons">add</i>
             </a>
           </div>
